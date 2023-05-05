@@ -1,4 +1,4 @@
-FROM ubuntu:20.10
+FROM ubuntu:jammy
 LABEL Author="HotaruBlaze <https://github.com/HotaruBlaze>"
 ENV USER=container
 RUN useradd -ms /bin/bash ${USER}
@@ -7,7 +7,7 @@ RUN apt-get update \
     && apt-get install -y \
           ca-certificates \
           lsb-release \
-          libssl1.1 \
+          libssl3 \
           openssl \
           coreutils \
       && apt-get purge -y \
